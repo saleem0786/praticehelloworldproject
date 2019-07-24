@@ -1,0 +1,30 @@
+Streams API Java 8
+
+--
+1. Streams supports aggregate operations on the source data. Source data can be collections or Arrays.
+2.Java 8 Streams are designed in such a way that most of the stream operations returns streams only.
+
+Use of Streams in APS project.
+ Couple of questions.
+ 1. I think as Objects (JSON object) are different we cannot to use Streams in our project.
+ 2. We can make use of some of the Streams methods in our project by removing the if/esle conditions.
+	i. Stream.filter()
+	ii.Stream.match()
+	iii. Stream.anyMatch()
+As streams returns stream of objects,because of this i think we cannot use the streams every where in the project.
+As our projects not based on aggregate operations i think we cannot use streams.
+Give some disadvanteges to him (Assad)
+Disadvantages?
+
+Performance: A for loop through an array is extremely lightweight both in terms of heap and CPU usage.
+ If raw speed and memory thriftiness is a priority, using a stream is worse.
+
+Familiarity.The world is full of experienced procedural programmers, from many language backgrounds, for whom loops are 
+familiar and streams are novel. In some environments, you want to write code that's familiar to that kind of person.
+
+Cognitive overhead. Because of its declarative nature, and increased abstraction from what's happening underneath, 
+you may need to build a new mental model of how code relates to execution. Actually you only need to do this when 
+things go wrong, or if you need to deeply analyse performance or subtle bugs. When it "just works", it just works.
+
+Debuggers are improving, but even now, when you're stepping through stream code in a debugger, it can be harder work 
+than the equivalent loop, because a simple loop is very close to the variables and code locations that a traditional debugger works with.
